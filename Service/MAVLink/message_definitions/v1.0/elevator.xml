@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<mavlink>
+  <include>ardupilotmega.xml</include>
+  <version>1</version>
+  <dialect>1</dialect>
+  <enums>
+    <!-- #############################
+    ENUMS
+    ############################# -->
+    <enum name="MAV_ELEVATOR_EXAMPLE_ENUM" bitmask="true">
+      <description>Some description.</description>
+      <entry value="1" name="MAV_ELEVATOR_EXAMPLE_ENUM_FIRST">
+        <description>First.</description>
+      </entry>
+    </enum>
+    <!-- #############################
+    CMDS
+    ############################# -->
+    <enum name="MAV_CMD">
+      <entry value="40001" name="MAV_CMD_ELEVATOR_GO_TO_FLOOR">
+        <description>Go to floor command.</description>
+        <param index="1" label="Floor number" minValue="0">Number of floor.</param>
+      </entry>
+      <entry value="40002" name="MAV_CMD_ELEVATOR_CALL_FROM_FLOOR">
+        <description>Call from floor command.</description>
+        <param index="1" label="Floor number" minValue="0">Number of floor.</param>
+      </entry>
+    </enum>
+  </enums>
+  <messages>
+    <!-- #############################
+    MESSAGES
+    ############################# -->
+    <message id="60010" name="ELEVATOR_INFORMATION">
+      <description>Some description.</description>
+      <field type="uint8_t" name="gimbal_id" instance="true">Description.</field>
+    </message>
+  </messages>
+</mavlink>
