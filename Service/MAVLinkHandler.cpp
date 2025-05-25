@@ -4,6 +4,7 @@
 #include "Service.hpp"
 #include "MAVLinkHandler.hpp"
 #include "elevator/mavlink.h"
+#include "dialect_version.hpp"
 
 // #define LOG_MODULE_NAME "MAVLinkHandler"
 
@@ -24,6 +25,7 @@ void MAVLinkHandler::StartHandling(const uint16_t localPort,
                                    const uint16_t remotePort,
                                    const std::string remoteHost)
 {
+    DIALECT_VERSION;
     if (mUDPLink.Connect(localPort,
                          remotePort,
                          remoteHost)) {

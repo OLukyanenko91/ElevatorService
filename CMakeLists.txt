@@ -51,7 +51,8 @@ endif()
 target_link_libraries(ElevatorService PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
 target_include_directories(ElevatorService PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/Service/MAVLink/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/Service/ElevatorMAVLink/include
+    ${CMAKE_CURRENT_SOURCE_DIR}/Service/ElevatorMAVLink/dialect_version
 )
 
 include(GNUInstallDirs)
