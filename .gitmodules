@@ -1,0 +1,3 @@
+[submodule "Service/ElevatorMAVLink"]
+	path = Service/ElevatorMAVLink
+	url = https://github.com/OLukyanenko91/ElevatorMAVLink.git
